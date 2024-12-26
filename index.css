@@ -1,0 +1,52 @@
+body {
+ background-image: url("LogoSqr.JPG");
+ background-size: cover;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-weight: bold;
+ text-align: center;
+ height: 100vh;
+}
+
+.container {
+ background: skyblue;
+ max-width: 500px;
+ margin: auto;
+ border: 5px solid black;
+ border-radius: 10px;
+}
+
+h1 {
+ margin-top: 10px;
+ margin-bottom: 10px;
+ color: blue;
+}
+
+h2 {
+ font-size: 50px;
+ margin-top: 0;
+ margin-bottom: 20px;
+ color: blue;
+}
+
+button {
+ border: none;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ color: white;
+ font-weight: bold;
+ width: 200px;
+ margin-bottom: 5px;
+ border-radius: 5px;
+}
+
+.increment-btn1 {
+ background: darkred;
+}
+
+#save-btn {
+ background: darkgreen;
+}
+
+#save-el {
+ color: blue;
+}
