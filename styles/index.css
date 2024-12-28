@@ -1,18 +1,24 @@
 body {
- background-image: url("NatChampTeams.jpg");
+ background-image: url("NatTeamPennIowa.jpg");
  background-size: cover;
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  font-weight: bold;
  text-align: center;
- height: 100vh;
+ height: 50vh;
 }
 
-.container {
+.container1 {
  background: skyblue;
  max-width: 500px;
  margin: auto;
  border: 5px solid black;
- border-radius: 10px;
+ border-radius: 20px;
+}
+
+.flexrow {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
 }
 
 h1 {
@@ -36,6 +42,8 @@ button {
  font-weight: bold;
  width: 200px;
  margin-bottom: 5px;
+ margin-left: 10px;
+ margin-right: 10px;
  border-radius: 5px;
 }
 
