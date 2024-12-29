@@ -6,7 +6,7 @@
 
 <body>
   <div class="flexrow">
-    <div class="container1">
+    <div class="wrestlerscorebox">
     <h1>WRESTLER 1<br>PONITS SCORED:</h1>
     <h2 id="count-el1">0</h2>
     <button class="increment-btn1" onclick="increment1a()">ESCAPE<br>1</button>
@@ -18,11 +18,13 @@
     <br>
     <br>
     <button class="increment-btn1" onclick="reset1()">RESET</button>
-    <button id="save-btn" onclick="save1()">SAVE</button>
+    <!-- <button id="save-btn" onclick="save1()">SAVE</button> -->
     <p id="save-el1">Previous entires: </p>
     </div>
 
-    <div class="container1">
+    <button id="save-btn" onclick="saveMatch()">SAVE<br>SCORE</button>
+
+    <div class="wrestlerscorebox">
       <h1>WRESTLER 2<br>PONITS SCORED:</h1>
       <h2 id="count-el2">0</h2>
       <button class="increment-btn1" onclick="increment1b()">ESCAPE<br>1</button>
@@ -34,10 +36,19 @@
       <br>
       <br>
       <button class="increment-btn1" onclick="reset2()">RESET</button>
-      <button id="save-btn" onclick="save2()">SAVE</button>
+      <!-- <button id="save-btn" onclick="save2()">SAVE</button> -->
       <p id="save-el2">Previous entires: </p>
     </div>
   </div>
+      <br>
+      <br>
+  <div class="matchscorebox">
+    <h1>MATCH SCORE:</h1>
+    <h2 id="match-final"></h2>
+
+  </div>
+
+
  <script src="scrips/index.js"></script>
 </body>
 

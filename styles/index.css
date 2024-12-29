@@ -7,9 +7,17 @@ body {
  height: 50vh;
 }
 
-.container1 {
+.wrestlerscorebox {
  background: skyblue;
  max-width: 500px;
+ margin: auto;
+ border: 5px solid black;
+ border-radius: 20px;
+}
+
+.matchscorebox {
+ background: skyblue;
+ max-width: 700px;
  margin: auto;
  border: 5px solid black;
  border-radius: 20px;
@@ -52,7 +60,10 @@ button {
 }
 
 #save-btn {
+ font-size: xx-large;
+ width: 150px;
  background: darkgreen;
+ border: 5px solid black;
 }
 
 #save-el {

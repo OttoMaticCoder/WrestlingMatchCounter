@@ -2,8 +2,11 @@
 let saveEl1 = document.getElementById("save-el1")
 let saveEl2 = document.getElementById("save-el2")
 
+
 let countEl1 = document.getElementById("count-el1")
 let countEl2 = document.getElementById("count-el2")
+
+let matchFinal = document.getElementById("match-final")
 
 let count1 = 0
 let count2 = 0
@@ -50,24 +53,14 @@ function increment4b() {
     countEl2.textContent = count2
 }
 
-function save1() {
-    let countStr = count1 + " - "
-    // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
-    // 3. Render the variable in the saveEl using innerText
-    saveEl1.textContent += countStr
+function saveMatch() {
+    let matchScore = "{ " + count1 + " - " + count2 +" } "
+    matchFinal.textContent += matchScore
     countEl1.textContent = 0
-    count1 = 0
-    // console.log(count)
-}
-
-function save2() {
-    let countStr = count2 + " - "
-    // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
-    // 3. Render the variable in the saveEl using innerText
-    saveEl2.textContent += countStr
     countEl2.textContent = 0
+    count1 = 0
     count2 = 0
-    // console.log(count)
+
 }
 
 function reset1() {
