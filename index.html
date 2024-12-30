@@ -7,21 +7,28 @@
 <body>
   <div class="flexrow">
     <div class="wrestlerscorebox">
-    <h1>WRESTLER 1<br>PONITS SCORED:</h1>
-    <h2 id="count-el1">0</h2>
-    <button class="increment-btn1" onclick="increment1a()">ESCAPE<br>1</button>
-    <button class="increment-btn1" onclick="increment2a()">REVERSAL/NEARFALL<br>2</button>
-    <br>
-    <button class="increment-btn1" onclick="increment3a()">TAKEDOWN/NEARFALL<br>3</button>
-    <button class="increment-btn1" onclick="increment4a()">NEARFALL<br>4</button>
-    <br>
-    <br>
-    <br>
-    <button class="increment-btn1" onclick="reset1()">RESET</button>
+      <h1>WRESTLER 1<br>PONITS SCORED:</h1>
+      <h2 id="count-el1">0</h2>
+      <button class="increment-btn1" onclick="increment1a()">ESCAPE<br>1</button>
+      <button class="increment-btn1" onclick="increment2a()">REVERSAL/NEARFALL<br>2</button>
+      <br>
+      <button class="increment-btn1" onclick="increment3a()">TAKEDOWN/NEARFALL<br>3</button>
+      <button class="increment-btn1" onclick="increment4a()">NEARFALL<br>4</button>
+      <br>
+      <br>
+      <br>
+      <button class="increment-btn1" onclick="reset1()">RESET</button>
     </div>
 
-    <button id="save-btn" onclick="saveMatch()">SAVE<br>SCORE</button>
-
+    <div class="teamscorebox">
+      <h1>TEAM 1:</h1>
+      <h2 id="team-score1">0</h2>
+      <button id="save-btn" onclick="saveMatch()" >SAVE<br>SCORE</button>
+      <h1>TEAM 2:</h1>
+      <h2 id="team-score2">0</h2>
+      
+    </div>
+    
     <div class="wrestlerscorebox">
       <h1>WRESTLER 2<br>PONITS SCORED:</h1>
       <h2 id="count-el2">0</h2>
@@ -39,7 +46,7 @@
       <br>
       <br>
   <div class="matchscorebox">
-    <h1>MATCH SCORE:</h1>
+    <h1>MATCH SCORES:</h1>
     <h2 id="match-final"></h2>
 
   </div>

@@ -6,6 +6,11 @@ body {
  text-align: center;
  height: 50vh;
 }
+.teamscorebox {
+ background: skyblue;
+ width: 170px;
+ border: 5px solid black;
+}
 
 .wrestlerscorebox {
  background: skyblue;

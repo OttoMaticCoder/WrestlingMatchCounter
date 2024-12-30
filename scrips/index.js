@@ -6,12 +6,51 @@ let saveEl2 = document.getElementById("save-el2")
 let countEl1 = document.getElementById("count-el1")
 let countEl2 = document.getElementById("count-el2")
 
+let teamScore1 = document.getElementById("team-score1")
+let teamScore2 = document.getElementById("team-score2")
+
 let matchFinal = document.getElementById("match-final")
+
+let teamCount1 = 0
+let teamCount2 = 0
 
 let count1 = 0
 let count2 = 0
 
+
 console.log(saveEl)
+
+
+
+function saveMatch() {
+    if (count1 < count2) {
+        teamCount2 += 1
+        teamScore2.textContent = teamCount2
+    } else if (count2 < count1) {
+        teamCount1 += 1
+        teamScore1.textContent = teamCount1
+    }
+
+    let matchScore = "{ " + count1 + " - " + count2 +" } "
+    matchFinal.textContent += matchScore
+    countEl1.textContent = 0
+    countEl2.textContent = 0
+    count1 = 0
+    count2 = 0
+
+}
+
+function reset1() {
+    let countReset = count1 * 0
+    count1 = countReset
+    countEl1.textContent = count1
+}
+
+function reset2() {
+    let countReset = count2 * 0
+    count2 = countReset
+    countEl2.textContent = count2
+}
 
 function increment1a() {
     count1 += 1
@@ -50,27 +89,5 @@ function increment3b() {
 
 function increment4b() {
     count2 += 4
-    countEl2.textContent = count2
-}
-
-function saveMatch() {
-    let matchScore = "{ " + count1 + " - " + count2 +" } "
-    matchFinal.textContent += matchScore
-    countEl1.textContent = 0
-    countEl2.textContent = 0
-    count1 = 0
-    count2 = 0
-
-}
-
-function reset1() {
-    let countReset = count1 * 0
-    count1 = countReset
-    countEl1.textContent = count1
-}
-
-function reset2() {
-    let countReset = count2 * 0
-    count2 = countReset
     countEl2.textContent = count2
 }
