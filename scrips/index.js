@@ -23,12 +23,25 @@ console.log(saveEl)
 
 
 function saveMatch() {
-    if (count1 < count2) {
-        teamCount2 += 1
-        teamScore2.textContent = teamCount2
-    } else if (count2 < count1) {
-        teamCount1 += 1
+    if (count1 >= count2 + 15) {
+        teamCount1 += 5
         teamScore1.textContent = teamCount1
+    } else if (count1 >= count2 + 8) {
+        teamCount1 += 4
+        teamScore1.textContent = teamCount1 
+    } else if (count1 > count2) {
+        teamCount1 += 3
+        teamScore1.textContent = teamCount1
+
+    } else if (count2 >= count1 + 15) {
+        teamCount2 += 5
+        teamScore2.textContent = teamCount2
+    } else if (count2 >= count1 + 8) {
+        teamCount2 += 4
+        teamScore2.textContent = teamCount2
+    } else if (count2 > count1) {
+        teamCount2 += 3
+        teamScore2.textContent = teamCount2
     }
 
     let matchScore = "{ " + count1 + " - " + count2 +" } "
