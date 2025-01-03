@@ -17,12 +17,43 @@ let teamCount2 = 0
 let count1 = 0
 let count2 = 0
 
+let resetMatchScores =
+    countEl1.textContent = 0
+    countEl2.textContent = 0
+    count1 = 0
+    count2 = 0
+
+let matchScore = " { " + count1 + " - " + count2 +" } "
 
 console.log(saveEl)
 
+function pin1() {
+    teamCount1 +=6
+    teamScore1.textContent = teamCount1
 
+    let matchScore = "{ " + count1 + " - " + count2 +"| P W1} "
+    matchFinal.textContent += matchScore
+    countEl1.textContent = 0
+    countEl2.textContent = 0
+    count1 = 0
+    count2 = 0
+    
+}
 
-function saveMatch() {
+function pin2() {
+    teamCount2 += 6
+    teamScore2.textContent = teamCount2
+
+    let matchScore = "{ " + count1 + " - " + count2 +"| P W2} "
+    matchFinal.textContent += matchScore
+    countEl1.textContent = 0
+    countEl2.textContent = 0
+    count1 = 0
+    count2 = 0
+}
+
+function saveMatch() { 
+
     if (count1 >= count2 + 15) {
         teamCount1 += 5
         teamScore1.textContent = teamCount1
