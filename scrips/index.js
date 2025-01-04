@@ -32,6 +32,7 @@ function pin1() {
     teamScore1.textContent = teamCount1
 
     let matchScore = "{ " + count1 + " - " + count2 +"| P W1} "
+    // matchScore += "| P W1} "
     matchFinal.textContent += matchScore
     countEl1.textContent = 0
     countEl2.textContent = 0
@@ -45,6 +46,7 @@ function pin2() {
     teamScore2.textContent = teamCount2
 
     let matchScore = "{ " + count1 + " - " + count2 +"| P W2} "
+    // matchScore += "| P W2} "
     matchFinal.textContent += matchScore
     countEl1.textContent = 0
     countEl2.textContent = 0
