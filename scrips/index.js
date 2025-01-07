@@ -9,44 +9,38 @@ let wrestler2El = document.getElementById("wrestler2")
 let wrestlercount1 = 0
 let wrestlercount2 = 0
 
-let teamScore1 = document.getElementById("team-score1")
-let teamScore2 = document.getElementById("team-score2")
+let teamScoreEl1 = document.getElementById("team-score1")
+let teamScoreEl2 = document.getElementById("team-score2")
 
 let matchFinal = document.getElementById("match-final")
 
-let teamCount1 = 0
-let teamCount2 = 0
+let teamScore1 = 0
+let teamScore2 = 0
 
-let resetMatchScores =
+let resetMatchScores = matchFinal.textContent += matchScore
     wrestler1El.textContent = 0
     wrestler2El.textContent = 0
     wrestlercount1 = 0
     wrestlercount2 = 0
 
-let matchScore = " { " + wrestlercount1 + " - " + wrestlercount2 +" } "
+// let matchScore = " { " + wrestlercount1 + " - " + wrestlercount2 +" } "
 
-console.log(saveEl)
+function pin(target) {
+    if (target === 'wrestler1') {
+        teamScore1 += 6
+        teamScoreEl1.textContent = teamScore1
+    } else if(target === 'wrestler2') {
+        teamScore2 += 6
+        teamScoreEl1.textContent = teamScore1
+    }
 
-function pin1() {
-    teamCount1 +=6
-    teamScore1.textContent = teamCount1
+    let matchScore = "{ " + wrestlercount1 + " - " + wrestlercount2
+        if (target === 'wrestler1') {
+            matchScore += " | P W1} "
+        } else if (target === 'wrestler2') {
+            matchScore += " | P W2} "
+        }
 
-    let matchScore = "{ " + wrestlercount1 + " - " + wrestlercount2 +"| P W1} "
-    // matchScore += "| P W1} "
-    matchFinal.textContent += matchScore
-    wrestler1El.textContent = 0
-    wrestler2El.textContent = 0
-    wrestlercount1 = 0
-    wrestlercount2 = 0
-    
-}
-
-function pin2() {
-    teamCount2 += 6
-    teamScore2.textContent = teamCount2
-
-    let matchScore = "{ " + wrestlercount1 + " - " + wrestlercount2 +"| P W2} "
-    // matchScore += "| P W2} "
     matchFinal.textContent += matchScore
     wrestler1El.textContent = 0
     wrestler2El.textContent = 0
@@ -57,24 +51,24 @@ function pin2() {
 function saveMatch() { 
 
     if (wrestlercount1 >= wrestlercount2 + 15) {
-        teamCount1 += 5
-        teamScore1.textContent = teamCount1
+        teamScore1 += 5
+        teamScoreEl1.textContent = teamScore1
     } else if (wrestlercount1 >= wrestlercount2 + 8) {
-        teamCount1 += 4
-        teamScore1.textContent = teamCount1 
+        teamScore1 += 4
+        teamScoreEl1.textContent = teamScore1 
     } else if (wrestlercount1 > wrestlercount2) {
-        teamCount1 += 3
-        teamScore1.textContent = teamCount1
+        teamScore1 += 3
+        teamScoreEl1.textContent = teamScore1
 
     } else if (wrestlercount2 >= wrestlercount1 + 15) {
-        teamCount2 += 5
-        teamScore2.textContent = teamCount2
+        teamScore2 += 5
+        teamScoreEl2.textContent = teamScore2
     } else if (wrestlercount2 >= wrestlercount1 + 8) {
-        teamCount2 += 4
-        teamScore2.textContent = teamCount2
+        teamScore2 += 4
+        teamScoreEl2.textContent = teamScore2
     } else if (wrestlercount2 > wrestlercount1) {
-        teamCount2 += 3
-        teamScore2.textContent = teamCount2
+        teamScore2 += 3
+        teamScoreEl2.textContent = teamScore2
     }
 
     let matchScore = "{ " + wrestlercount1 + " - " + wrestlercount2 +" } "
@@ -94,18 +88,6 @@ function reset(target) {
         wrestlercount2 = 0
         wrestler2El.textContent = wrestlercount2
     }
-}
-
-function reset1() {
-    let countReset = wrestlercount1 * 0
-    wrestlercount1 = countReset
-    wrestler1El.textContent = wrestlercount1
-}
-
-function reset2() {
-    let countReset = wrestlercount2 * 0
-    wrestlercount2 = countReset
-    wrestler2El.textContent = wrestlercount2
 }
 
 function increment(target, value) {
