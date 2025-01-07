@@ -31,7 +31,7 @@ function pin(target) {
         teamScoreEl1.textContent = teamScore1
     } else if(target === 'wrestler2') {
         teamScore2 += 6
-        teamScoreEl1.textContent = teamScore1
+        teamScoreEl2.textContent = teamScore2
     }
 
     let matchScore = "{ " + wrestlercount1 + " - " + wrestlercount2
