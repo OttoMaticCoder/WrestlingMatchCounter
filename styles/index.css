@@ -1,11 +1,22 @@
 body {
- background-image: url("NatTeamPennIowa.jpg");
+ background-image: url("AllChamps.jpg");
  background-size: cover;
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  font-weight: bold;
  text-align: center;
  height: 50vh;
 }
+
+.teamlogo {
+ background: skyblue;
+ margin: auto;
+ border: 5px solid black;
+}
+
+#vs {
+ font-size: 80px;
+}
+
 .teamscorebox {
  background: skyblue;
  width: 170px;
