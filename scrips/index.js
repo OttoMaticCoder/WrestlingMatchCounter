@@ -72,7 +72,11 @@ function saveMatch() {
     }
 
     let matchScore = "{ " + wrestlercount1 + " - " + wrestlercount2 +" } "
-    matchFinal.textContent += matchScore
+    let newEntry = document.createElement("p")
+    newEntry.textContent = matchScore
+    matchFinal.appendChild(newEntry)
+    
+    // matchFinal.textContent += matchScore
     wrestler1El.textContent = 0
     wrestler2El.textContent = 0
     wrestlercount1 = 0
