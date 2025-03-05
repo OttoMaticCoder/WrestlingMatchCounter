@@ -36,12 +36,16 @@ function pin(target) {
 
     let matchScore = "{ " + wrestlercount1 + " - " + wrestlercount2
         if (target === 'wrestler1') {
-            matchScore += " | P W1} "
+            matchScore += " | P W1 } "
         } else if (target === 'wrestler2') {
-            matchScore += " | P W2} "
+            matchScore += " | P W2 } "
         }
 
-    matchFinal.textContent += matchScore
+    let newEntry = document.createElement("p")
+    newEntry.textContent = matchScore
+    matchFinal.appendChild(newEntry)
+    
+    // matchFinal.textContent += matchScore
     wrestler1El.textContent = 0
     wrestler2El.textContent = 0
     wrestlercount1 = 0
